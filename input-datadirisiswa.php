@@ -1,14 +1,5 @@
 <?php 
       include('./input-config.php');
-      if($_SESSION["login"] != TRUE){
-            header('location:login.php');
-      }
-
-      echo"selamat datang,".$_SESSION ["username"]."<br>";
-      echo"anda sebagai : " .$_SESSION["role"];
-      echo"-";
-      echo"<a href='logout.php'>Logout</a>";
-      echo"<hr>"; 
       echo "<a href='input-datadiri-tambah.php'>Tambah Data</a>";
       echo "<hr>";
       // READ - Menampilkan data dari database
@@ -20,9 +11,11 @@
                   <tr>
                         <td>".$row["nis"]."</td>
                         <td>".$row["namalengkap"]."</td>
-                        <td>".$row["tanggal_lahir"]."</td>
-                        <td>".$row["nilai"]."</td>
-                        <td>
+                        <td>".$row["kelas"]."</td>
+                        <td>".$row["kehadiran"]."</td>
+                        <td>".$row["tugas"]."</td>
+                        <td>".$row["uts"]."</td>
+                        <td>".$row["uas"]."</td>
                               <a href='input-datadiri-edit.php?nis=".$row["nis"]."'>Edit</a>
                               &nbsp;-&nbsp;
                               <a href='input-datadiri-hapus.php?nis=".$row["nis"]."' 
